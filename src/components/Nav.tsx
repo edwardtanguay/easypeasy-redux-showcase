@@ -11,8 +11,8 @@ const menuItems = [
 		title: "Welcome",
 	},
 	{
-		idCode: "info",
-		title: "Info",
+		idCode: "profile",
+		title: "Profile",
 	},
 	{
 		idCode: "about",
