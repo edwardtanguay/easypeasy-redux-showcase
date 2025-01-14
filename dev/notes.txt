@@ -4,10 +4,12 @@
         - with "Typed"
     - x message
     - x userLevel 
-    - .. enable change level
+    - x enable setUserLevel
         - x change with <p>change level: <input value={level} className="text-right w-[4rem] px-1" onChange={(e) => setLevel(Number(e.target.value))}/></p>
         - x also show on another page
             - x page info to profile 
             - x display on profile
         - 
-    -  
+    - x add userName
+        - x same as level
+    - ..  
