@@ -1,10 +1,12 @@
-import { action, Action } from "easy-peasy";
+import { action, Action, persist } from "easy-peasy";
 
 export interface MainModel {
 
 	// state
 	message: string;
-	userName: string;
+	persisted: {
+		userName: string;
+	}
 	userLevel: number;
 
 	// actions
@@ -16,7 +18,14 @@ export const mainModel: MainModel = {
 
 	// state
 	message: 'This text comes from the main model.',
-	userName: '',
+	persisted: persist (
+		{
+			userName: '',
+        }, 
+		{
+			allow: ['userName']
+		}
+	),
 	userLevel: 0,
 
 	// actions
@@ -24,6 +33,6 @@ export const mainModel: MainModel = {
 		state.userLevel = level;
 	}),
 	setUserName: action((state, name) => {
-		state.userName = name;
+		state.persisted.userName = name;
 	})
 };

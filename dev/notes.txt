@@ -12,4 +12,23 @@
         - 
     - x add userName
         - x same as level
-    - ..  
+    - .. persist data
+        - .. persit name only
+            -------------------------------------------------------
+            export interface MainModel {
+
+            persisted: {
+                userName: string;
+            }
+            userLevel: number;
+
+            persisted: persist (
+                {
+                    userName: '',
+                }, 
+                {
+                    allow: ['userName']
+                }
+            ),
+            userLevel: 0,
+            -------------------------------------------------------

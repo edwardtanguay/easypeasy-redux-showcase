@@ -1,10 +1,10 @@
 import { useTypedStoreState } from "../store/hooks"
 
 export const PageProfile = () => {
-	const {userName, userLevel} = useTypedStoreState(state => state.mainModel);
+	const {persisted, userLevel} = useTypedStoreState(state => state.mainModel);
 	return (
 		<>
-		<p>User name: {userName}</p>
+		<p>User name: {persisted.userName}</p>
 		<p>User level: {userLevel}</p>
 		</>
 	)
